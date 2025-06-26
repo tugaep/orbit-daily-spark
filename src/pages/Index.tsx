@@ -7,16 +7,19 @@ import FeaturesSection from "@/components/FeaturesSection";
 import CTASection from "@/components/CTASection";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <LanguageSwitcher />
-      <HeroSection />
-      <FeaturesSection />
-      <CTASection />
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+        <LanguageSwitcher />
+        <HeroSection />
+        <FeaturesSection />
+        <CTASection />
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

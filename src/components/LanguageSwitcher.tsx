@@ -6,16 +6,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LanguageSwitcher = () => {
-  const [currentLanguage, setCurrentLanguage] = useState("EN");
+  const { language, setLanguage } = useLanguage();
 
-  const handleLanguageChange = (language: string, code: string) => {
-    setCurrentLanguage(code);
-    console.log(`Language changed to: ${language}`);
-    // Here you would typically implement actual language switching logic
-    // such as updating a global context or calling an i18n library
+  const handleLanguageChange = (newLanguage: 'en' | 'tr', displayName: string) => {
+    setLanguage(newLanguage);
+    console.log(`Language changed to: ${displayName}`);
+  };
+
+  const getDisplayLanguage = () => {
+    return language === 'en' ? 'EN' : 'TR';
   };
 
   return (
@@ -23,19 +25,19 @@ const LanguageSwitcher = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm" className="bg-white/90 backdrop-blur-sm">
-            {currentLanguage}
+            {getDisplayLanguage()}
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-white border shadow-lg">
           <DropdownMenuItem 
             className="cursor-pointer hover:bg-gray-100"
-            onClick={() => handleLanguageChange("English", "EN")}
+            onClick={() => handleLanguageChange('en', 'English')}
           >
             English
           </DropdownMenuItem>
           <DropdownMenuItem 
             className="cursor-pointer hover:bg-gray-100"
-            onClick={() => handleLanguageChange("Türkçe", "TR")}
+            onClick={() => handleLanguageChange('tr', 'Türkçe')}
           >
             Türkçe
           </DropdownMenuItem>

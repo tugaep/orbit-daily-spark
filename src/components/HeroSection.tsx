@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Orbit, Play } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#004aad] via-blue-600 to-blue-800 text-white">
       {/* Animated background orbitals */}
@@ -35,14 +38,14 @@ const HeroSection = () => {
           <p className="text-xl lg:text-2xl mb-8 text-blue-100 animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            Smart Digital Daily Planner
+            {t('hero.tagline')}
           </p>
           
           {/* Description */}
           <p className="text-lg lg:text-xl mb-12 text-blue-200 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
             animationDelay: '0.4s'
           }}>
-            Enhance your day with smart personal suggestions, AI planning, and maximize your effectiveness with intelligent daily optimization.
+            {t('hero.description')}
           </p>
           
           {/* CTA Buttons */}
@@ -50,7 +53,7 @@ const HeroSection = () => {
             animationDelay: '0.6s'
           }}>
             <Button size="lg" className="bg-white text-[#004aad] hover:bg-blue-50 font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105">
-              Information
+              {t('hero.information')}
             </Button>
             <Button 
               size="lg" 
@@ -59,7 +62,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-2">
                 <Play className="w-5 h-5 transition-transform group-hover:scale-110" />
-                <span>Watch Demo</span>
+                <span>{t('hero.watchDemo')}</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </Button>
