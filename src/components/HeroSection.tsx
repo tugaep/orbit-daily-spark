@@ -29,42 +29,47 @@ const HeroSection = () => {
             <img src="/lovable-uploads/83ef859e-9641-44b2-bd9a-6693c223303f.png" alt="Orbit Logo" className="w-20 h-20 animate-pulse" />
           </div>
           
-          {/* Main heading */}
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-fade-in">
             Orbit
           </h1>
           
-          {/* Subheading */}
           <p className="text-xl lg:text-2xl mb-8 text-blue-100 animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
             {t('hero.tagline')}
           </p>
           
-          {/* Description */}
           <p className="text-lg lg:text-xl mb-12 text-blue-200 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{
             animationDelay: '0.4s'
           }}>
             {t('hero.description')}
           </p>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
+          {/* Updated CTA Buttons with new design */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{
             animationDelay: '0.6s'
           }}>
-            <Button size="lg" className="bg-white text-[#004aad] hover:bg-blue-50 font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105">
-              {t('hero.information')}
+            <Button 
+              size="lg" 
+              className="relative bg-gradient-to-r from-white to-blue-50 text-[#004aad] hover:from-blue-50 hover:to-white font-bold px-10 py-5 text-lg rounded-full shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-110 transform border-2 border-white/30 group overflow-hidden"
+            >
+              <span className="relative z-10">{t('hero.information')}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
+            
             <Button 
               size="lg" 
               variant="outline" 
-              className="relative border-2 border-white text-white hover:bg-white hover:text-[#004aad] font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 group overflow-hidden"
+              className="relative border-3 border-white/80 bg-transparent backdrop-blur-sm text-white hover:bg-white/10 font-bold px-10 py-5 text-lg rounded-full shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-110 transform group overflow-hidden"
             >
-              <div className="flex items-center gap-2">
-                <Play className="w-5 h-5 transition-transform group-hover:scale-110" />
+              <div className="flex items-center gap-3 relative z-10">
+                <div className="p-2 bg-white/20 rounded-full group-hover:bg-white/30 transition-colors duration-300">
+                  <Play className="w-5 h-5 transition-transform group-hover:scale-125" />
+                </div>
                 <span>{t('hero.watchDemo')}</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <div className="absolute inset-0 border border-white/50 rounded-full animate-pulse"></div>
             </Button>
           </div>
         </div>
