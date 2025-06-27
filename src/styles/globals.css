@@ -1,0 +1,11 @@
+.custom-spin-on-hover {
+  transition: transform 0.7s;
+}
+.custom-spin-on-hover:hover {
+  animation: custom-spin 2s linear infinite !important;
+}
+@keyframes custom-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+} 

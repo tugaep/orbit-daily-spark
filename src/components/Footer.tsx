@@ -1,10 +1,18 @@
-
 import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/sonner";
 
 const Footer = () => {
   const handleAboutUs = () => {
-    // This can be updated to navigate to an actual About Us page later
-    console.log("Navigate to About Us");
+    // Navigate to features section
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleCareers = () => {
+    // Show coming soon message with smooth toast
+    toast("soon :)");
   };
 
   const handleEmailClick = () => {
@@ -16,8 +24,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold text-white mb-2">Orbit</h3>
-            <p className="text-gray-400">Smart Digital Daily Planner</p>
+            <h3 className="text-2xl font-bold text-white mb-2">orbit</h3>
+            <p className="text-gray-400">your own digital daily planner</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center">
@@ -31,6 +39,13 @@ const Footer = () => {
             <Button 
               variant="ghost" 
               className="text-white hover:text-[#004aad] hover:bg-white/10"
+              onClick={handleCareers}
+            >
+              Careers
+            </Button>
+            <Button 
+              variant="ghost" 
+              className="text-white hover:text-[#004aad] hover:bg-white/10"
               onClick={handleEmailClick}
             >
               info@orbitapp.tech
@@ -40,7 +55,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Orbit. All rights reserved.
+            © 2025 Orbit. All rights reserved.
           </p>
         </div>
       </div>

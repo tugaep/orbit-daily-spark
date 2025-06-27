@@ -1,73 +1,147 @@
-# Welcome to your Lovable project
+# Orbit - Smart Digital Daily Planner
 
-## Project info
+## 🚀 Proje Hakkında
+
+**Orbit**, yapay zeka destekli akıllı dijital günlük planlayıcı uygulamasıdır. Kişisel verimliliği artırmak için AI planlama, akıllı öneriler ve gelişmiş analitik özellikleri sunar.
 
 **URL**: https://lovable.dev/projects/327d3f4b-fd3d-4672-aaf0-8d96833a84b5
 
-## How can I edit this code?
+## ✨ Özellikler
 
-There are several ways of editing your application.
+- 🤖 **AI Destekli Planlama**: Yapay zeka ile günlük program optimizasyonu
+- 🎯 **Akıllı Öneriler**: Kişiselleştirilmiş görev ve aktivite önerileri
+- 📊 **Gelişmiş Analitik**: Verimlilik trendleri ve performans metrikleri
+- 🔗 **Kesintisiz Entegrasyon**: Favori araçlarla entegrasyon
+- 📱 **Mobil Öncelikli**: Responsive tasarım
+- 🌍 **Çok Dilli Destek**: Türkçe ve İngilizce
 
-**Use Lovable**
+## 🛠️ Teknolojiler
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/327d3f4b-fd3d-4672-aaf0-8d96833a84b5) and start prompting.
+- **Frontend**: React 18, TypeScript, Vite
+- **UI Framework**: shadcn/ui, Tailwind CSS
+- **State Management**: React Query (TanStack Query)
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Forms**: React Hook Form, Zod validation
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Kurulum ve Çalıştırma
 
-**Use your preferred IDE**
+### Gereksinimler
+- Node.js 18+ 
+- npm veya yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Adımlar
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# 1. Repository'yi klonlayın
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Proje dizinine gidin
+cd orbit-daily-spark
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Bağımlılıkları yükleyin
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Geliştirme sunucusunu başlatın
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Uygulama http://localhost:8080 adresinde çalışacaktır.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Mevcut Script'ler
 
-**Use GitHub Codespaces**
+```bash
+npm run dev          # Geliştirme sunucusu
+npm run build        # Production build
+npm run preview      # Build önizleme
+npm run lint         # ESLint kontrolü
+npm run lint:fix     # ESLint otomatik düzeltme
+npm run type-check   # TypeScript tip kontrolü
+npm run format       # Prettier formatlama
+npm run analyze      # Bundle analizi
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Proje Yapısı
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # UI bileşenleri
+│   ├── ui/             # shadcn/ui bileşenleri
+│   ├── HeroSection.tsx # Ana hero bölümü
+│   ├── FeaturesSection.tsx # Özellikler bölümü
+│   ├── CTASection.tsx  # Call-to-action bölümü
+│   ├── Footer.tsx      # Footer bileşeni
+│   └── LanguageSwitcher.tsx # Dil değiştirici
+├── contexts/           # React context'leri
+│   └── LanguageContext.tsx # Dil yönetimi
+├── pages/              # Sayfa bileşenleri
+│   ├── Index.tsx       # Ana sayfa
+│   └── NotFound.tsx    # 404 sayfası
+├── lib/                # Yardımcı fonksiyonlar
+└── hooks/              # Custom React hooks
+```
 
-This project is built with:
+## 🌍 Çok Dilli Destek
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Proje Türkçe ve İngilizce dil desteği sunar. Dil değiştirme işlemi sağ üst köşedeki dil seçici ile yapılabilir.
 
-## How can I deploy this project?
+## 🔧 Geliştirme
 
-Simply open [Lovable](https://lovable.dev/projects/327d3f4b-fd3d-4672-aaf0-8d96833a84b5) and click on Share -> Publish.
+### Kod Düzenleme
 
-## Can I connect a custom domain to my Lovable project?
+**Lovable ile**
+Lovable projesini ziyaret ederek doğrudan prompt ile düzenleme yapabilirsiniz.
 
-Yes, you can!
+**Yerel IDE ile**
+Tercih ettiğiniz IDE'yi kullanarak yerel geliştirme yapabilirsiniz.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**GitHub ile**
+- Dosyayı seçin ve "Edit" butonuna tıklayın
+- Değişiklikleri yapın ve commit edin
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**GitHub Codespaces ile**
+- Repository ana sayfasında "Code" butonuna tıklayın
+- "Codespaces" sekmesini seçin
+- "New codespace" ile yeni ortam başlatın
+
+## 🚀 Deployment
+
+Lovable üzerinden:
+1. [Lovable Projesi](https://lovable.dev/projects/327d3f4b-fd3d-4672-aaf0-8d96833a84b5)'ni açın
+2. Share → Publish'e tıklayın
+
+## 🌐 Özel Domain
+
+Özel domain bağlamak için:
+1. Project → Settings → Domains
+2. "Connect Domain" butonuna tıklayın
+3. [Detaylı rehber](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## 📊 Performans
+
+- **Build Süresi**: ~1.3s
+- **Bundle Boyutu**: ~354KB (gzip: ~113KB)
+- **CSS Boyutu**: ~66KB (gzip: ~11KB)
+
+## 🔒 Güvenlik
+
+- Development server localhost'a kısıtlandı
+- Strict port kontrolü aktif
+- Güvenlik açıkları düzeltildi
+
+## 🤝 Katkıda Bulunma
+
+1. Fork yapın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit yapın (`git commit -m 'Add amazing feature'`)
+4. Push yapın (`git push origin feature/amazing-feature`)
+5. Pull Request açın
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+## 📞 İletişim
+
+- **Email**: info@orbitapp.tech
+- **Proje URL**: https://lovable.dev/projects/327d3f4b-fd3d-4672-aaf0-8d96833a84b5
